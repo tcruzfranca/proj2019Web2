@@ -108,6 +108,14 @@ public class Registro {
 	public void setTempoEspera(long tempoEspera) {
 		this.tempoEspera = tempoEspera;
 	}
+
+	public Resposta getRespostas() {
+		return respostas;
+	}
+
+	public void setRespostas(Resposta respostas) {
+		this.respostas = respostas;
+	}
 	
 	
 

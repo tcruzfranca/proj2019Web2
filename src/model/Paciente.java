@@ -15,6 +15,8 @@ public class Paciente extends Usuario{
 	private String telefoneContato;
 	@Column
 	private String pcd;
+	@Column
+	private Avatar avatar;
 	
 	
 	public String getNomeResponsavel() {
@@ -40,6 +42,12 @@ public class Paciente extends Usuario{
 	}
 	public void setPcd(String pcd) {
 		this.pcd = pcd;
+	}
+	public Avatar getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(Avatar avatar) {
+		this.avatar = avatar;
 	}
 
 }

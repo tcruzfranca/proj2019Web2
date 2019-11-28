@@ -16,6 +16,22 @@ public class Resposta {
 	
 	@Column
 	private boolean[] respostas = new boolean[8];
+
+	public boolean[] getRespostas() {
+		return respostas;
+	}
+
+	public void setRespostas(boolean[] respostas) {
+		this.respostas = respostas;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 
 }

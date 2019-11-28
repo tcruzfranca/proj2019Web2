@@ -17,34 +17,34 @@ public class RegistroController {
 	EntityManager em = emf.createEntityManager();
 	RegistroDAO rDAO = new RegistroDAO(em, emf);
 	
-	public void salvarPaciente(Registro registro) {
+	public void salvarRegistro(Registro registro) {
 		   rDAO.persist(registro);
 		}
 		
-		public void deletePaciente(Registro registro) {
+		public void deleteRegistro(Registro registro) {
 			rDAO.remove(registro);
 		}
-		public Registro findOnePaciente(String text) {
+		public Registro findOneRegistro(String text) {
 			 Registro r = rDAO.findOne(text);
 			 return r;
 		}
 		
-		public List<Registro> findManyPaciente(String text) {
+		public List<Registro> findManyRegistro(String text) {
 			List<Registro> lista = rDAO.findMany(text);
 			return lista;
 		}
 		
-		public List<Registro> findManyPaciente(Paciente paciente) {
+		public List<Registro> findManyRegistro(Paciente paciente) {
 			List<Registro> lista = rDAO.findMany(paciente);
 			return lista;
 		}
 		
-		public List<Registro> findManyPaciente(Dentista dentista) {
+		public List<Registro> findManyRegistro(Dentista dentista) {
 			List<Registro> lista = rDAO.findMany(dentista);
 			return lista;
 		}
 		
-		public List<Registro> findManyPaciente(Paciente paciente, Dentista dentista) {
+		public List<Registro> findManyRegistro(Paciente paciente, Dentista dentista) {
 			List<Registro> lista = rDAO.findMany(paciente, dentista);
 			return lista;
 		}

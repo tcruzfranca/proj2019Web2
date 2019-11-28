@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -39,6 +40,10 @@ public class Registro {
 	
 	@Column
 	private long tempoEspera;
+	
+	@Column
+	@ManyToMany
+	private Resposta respostas;
 
 	public int getId() {
 		return id;

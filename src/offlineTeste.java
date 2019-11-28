@@ -1,31 +1,31 @@
 import java.util.List;
 
-import controller.PacienteController;
-import model.Paciente;
+import controller.DentistaController;
+import model.Dentista;
 
 public class offlineTeste {
 
 	public static void main(String[] args) {
-		Paciente p1 = new Paciente();
-		PacienteController con = new PacienteController();
+		Dentista p1 = new Dentista();
+		DentistaController con = new DentistaController();
 		p1.setNome("Gabigol");
-		p1.setNomeResponsavel("Libertadores");
-		p1.setCpf("12313111");
+		
+		p1.setCro("12313111");
 		
 		
-		Paciente p2 = new Paciente();
+		 Dentista p2 = new Dentista();
 		p2.setNome("Gabigol");
-		p2.setCpf("331231");
-		p2.setNomeResponsavel("Brasileirão");
+		p2.setCro("331231");
+	
+		
+		con.salvarDentista(p1);
+		con.salvarDentista(p2);
 		
 		
-		
-		
-		con.salvarPaciente(p1);
-		con.salvarPaciente(p2);
-		List<Paciente> p = con.findManyPaciente("Gabigol");
+
+		List<Dentista> p = con.findManyDentista("Gabigol");
 		for(int i = 0; i <p.size(); i++) {
-			System.out.println(p.get(i).getNomeResponsavel());
+			System.out.println(p.get(i).getCro());
 		}
 		
 
